@@ -1,0 +1,257 @@
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-ExtraBold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-ExtraBoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-ExtraLightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-ExtraBold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-ExtraBoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-ExtraLightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt';
+  src: url('./assets/fonts/NunitoSans7pt-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --dark-blue-dark-mode-elements: hsl(209, 23%, 22%);
+  --very-dark-blue-dark-mode-background: hsl(207, 26%, 17%);
+  --very-dark-blue-light-mode-text: hsl(200, 15%, 8%);
+  --dark-gray-light-mode-input: hsl(0, 0%, 52%);
+  --very-light-gray-light-mode-background: hsl(0, 0%, 98%);
+  --white-dark-mode-text-light-mode-lements: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: 'Nunito Sans 7pt';
+}
