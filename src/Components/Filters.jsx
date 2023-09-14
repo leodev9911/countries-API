@@ -1,15 +1,19 @@
+import { useContext } from "react"
+import { AppContext } from "../context/context"
 
 export default function Filters({ changeFilter }) {
-  
+
+    const { setFilters } = useContext(AppContext)
+
     const handleCountry = (event) => {
-        changeFilter(prev => ({
+        setFilters(prev => ({
             ...prev,
             country: event.target.value
         }))
     }
 
     const handleRegion = (event) => {
-        changeFilter(prev => ({
+        setFilters(prev => ({
             ...prev,
             region: event.target.value
         }))

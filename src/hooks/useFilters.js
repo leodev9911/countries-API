@@ -1,19 +1,17 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { AppContext } from "../context/context"
 
 export function useFilters() {
-    const [filters, setFilters] = useState({
-        country: "",
-        region: "all"
-    })
+    const { filters, setFilters } = useContext(AppContext)
 
     const filterCountries = (countries) => {
         return (
             countries.filter(country => {
-                return country.name.toLowerCase().includes(filters.country.toLowerCase()) && 
-                (
-                    filters.region === "all" ||
-                    country.region === filters.region
-                )
+                    return country.name.toLowerCase().includes(filters.country.toLowerCase()) && 
+                    (
+                        filters.region === "all" ||
+                        country.region === filters.region
+                    )
             })
         )
     }

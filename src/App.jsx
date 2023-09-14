@@ -8,7 +8,7 @@ import { useFilters } from "./hooks/useFilters.js"
 
 export default function App() {
     const [countries] = useState(data)
-    const { filterCountries, setFilters } = useFilters()
+    const { filterCountries } = useFilters()
     
     const filteredCountries = filterCountries(countries)
 
@@ -18,7 +18,7 @@ export default function App() {
                 <h1>Hello World!</h1>
             </header>
             <main>
-                <Filters changeFilter={setFilters}/>
+                <Filters />
                 <Card 
                     countriesToRender={filteredCountries}
                 />
