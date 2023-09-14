@@ -21,6 +21,7 @@ export default function Filters({ changeFilter }) {
                 <label htmlFor="search-country">Search</label>
                 <img src="" alt="" />
                 <input 
+                    id="search-country"
                     type="text" 
                     placeholder="country" 
                     onChange={handleCountry}
