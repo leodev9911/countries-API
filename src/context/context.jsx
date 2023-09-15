@@ -15,7 +15,7 @@ export function ContextProvider({ children }) {
         <AppContext.Provider
             value={{
                 filters,
-                setFilters
+                setFilters, 
             }}
         >
             {children}

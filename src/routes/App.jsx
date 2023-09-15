@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import data from "../data.json"
-import Card from "./Components/Card"
-import Filters from "./Components/Filters"
-import { useFilters } from "./hooks/useFilters.js"
+import data from "../../data.json"
+import Card from "../Components/Card"
+import Filters from "../Components/Filters"
+import { useFilters } from "../hooks/useFilters.js"
 
 
 
