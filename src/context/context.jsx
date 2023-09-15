@@ -11,11 +11,15 @@ export function ContextProvider({ children }) {
         region: "all"
     })
 
+    const [lightMode, setLightMode] = useState(false)
+
     return (
         <AppContext.Provider
             value={{
                 filters,
                 setFilters, 
+                lightMode, 
+                setLightMode
             }}
         >
             {children}
