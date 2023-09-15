@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useId } from 'react'
 import './CountryDetail.css'
+import arrowBack from '../assets/icons/arrow-back.svg'
 
 export default function CountryDetails() {
     const location = useLocation()
@@ -19,7 +20,7 @@ export default function CountryDetails() {
 
     return (
         <section>
-            <Link to={`/`}><button>Back</button></Link>
+            <Link to={`/`}><button><img src={arrowBack} alt="" />Back</button></Link>
             <div className="country">
                 <figure>
                     <img src={flag} alt="" />

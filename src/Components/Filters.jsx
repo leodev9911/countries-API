@@ -1,7 +1,10 @@
-import { useContext } from "react"
-import { AppContext } from "../context/context"
+import { useContext } from 'react'
+import { AppContext } from '../context/context'
+import searchIcon from '../assets/icons/search.svg'
+import arrowDown from '../assets/icons/expand-more.svg'
+import './Filters.css'
 
-export default function Filters({ changeFilter }) {
+export default function Filters() {
 
     const { setFilters } = useContext(AppContext)
 
@@ -21,19 +24,18 @@ export default function Filters({ changeFilter }) {
 
     return (
         <section className="filters-section">
-            <div>
-                <label htmlFor="search-country">Search</label>
-                <img src="" alt="" />
+            <div className='search-div'>
+                <img src={searchIcon} alt="Search icon" />
                 <input 
                     id="search-country"
                     type="text" 
-                    placeholder="country" 
+                    placeholder="Search for a country..." 
                     onChange={handleCountry}
                 />
             </div>
-            <div>
-                <label htmlFor="region">Filter by region</label>
+            <div className='select-div'>
                 <select id="region" onChange={handleRegion}>
+                    <option value="" disabled selected>Filter by region</option>
                     <option value="all">All</option>
                     <option value="Africa">Africa</option>
                     <option value="Americas">Americas</option>

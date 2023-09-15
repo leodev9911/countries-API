@@ -19,9 +19,11 @@ export default function App() {
             </header>
             <main>
                 <Filters />
-                <Card 
-                    countriesToRender={filteredCountries}
-                />
+                <section className="cards-section">
+                    <Card 
+                        countriesToRender={filteredCountries}
+                    />
+                </section>
             </main>
         </>
     )
