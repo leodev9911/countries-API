@@ -282,3 +282,10 @@ main {
   gap: 40px;
   width: 100%;
 }
+header {
+  display: grid;
+  place-items: center;
+  background-color: var(--dark-blue-dark-mode-elements);
+  height: 64px;
+  width: 100%;
+}

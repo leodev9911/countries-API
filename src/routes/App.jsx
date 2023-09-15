@@ -3,6 +3,7 @@ import data from "../../data.json"
 import Card from "../Components/Card"
 import Filters from "../Components/Filters"
 import { useFilters } from "../hooks/useFilters.js"
+import Navbar from "../Components/Navbar"
 
 
 
@@ -15,7 +16,7 @@ export default function App() {
     return (
         <>
             <header>
-                <h1>Hello World!</h1>
+                <Navbar />
             </header>
             <main>
                 <Filters />
