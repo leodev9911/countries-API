@@ -34,8 +34,8 @@ export default function Filters() {
                 />
             </div>
             <div className='select-div'>
-                <select id="region" onChange={handleRegion}>
-                    <option value="" disabled selected>Filter by region</option>
+                <select id="region" onChange={handleRegion} defaultValue="">
+                    <option value="" disabled>Filter by region</option>
                     <option value="all">All</option>
                     <option value="Africa">Africa</option>
                     <option value="Americas">Americas</option>

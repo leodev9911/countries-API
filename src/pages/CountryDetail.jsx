@@ -3,8 +3,10 @@ import { useId } from 'react'
 import './CountryDetail.css'
 import arrowBack from '../assets/icons/arrow-back.svg'
 import Navbar from '../Components/Navbar'
+import data from '../../data.json'
 
 export default function CountryDetails() {
+
     const location = useLocation()
     const { 
         flag, 
@@ -16,8 +18,21 @@ export default function CountryDetails() {
         capital, 
         topLevelDomain, 
         currencies, 
-        languages, borders 
+        languages, 
+        borders 
     } = location.state.country
+
+    const bordersCountries = []
+    const languagesArr = languages.map(language => language.name)
+    const currenciesArr = currencies.map(currencie => currencie.name)
+
+    data.map(country => {
+        borders?.map(borderCountry => {
+            if (country.alpha3Code === borderCountry) {
+                bordersCountries.push(country)
+            }
+        })
+    })
 
     return (
         
@@ -41,23 +56,30 @@ export default function CountryDetails() {
                         <div className='columns'>
                             <div className='left-details'>
                                 <p><span>Native Name:</span> {nativeName}</p>
-                                <p><span>Population:</span> {population}</p>
+                                <p><span>Population:</span> {population.toLocaleString()}</p>
                                 <p><span>Region:</span> {region}</p>
                                 <p><span>Sub Region:</span> {subregion}</p>
                                 <p><span>Capital:</span> {capital}</p>
                             </div>
                             <div className='right-details'>
                                 <p><span>Top Level Domain:</span> {topLevelDomain}</p>
-                                <p><span>Currencies:</span> {currencies.map(currencie => currencie.name)}</p>
-                                <p><span>Languages: </span> {languages.map(language => language.name)}</p>
+                                <p><span>Currencies:</span> {currenciesArr.join(', ')}</p>
+                                <p><span>Languages: </span>{languagesArr?.join(', ')}</p>
                             </div>
                         </div>
                         <p className='borders'>Border Countries: {
                         Array.isArray(borders) ? 
-                            borders.map(country => {
-                                const id = useId()
+                            bordersCountries.map(country => {
                                 return (
-                                    <span key={id}>{country}</span>
+                                    <Link 
+                                        key={country.alpha2Code} 
+                                        to={`/country-details/:${country.name}`}
+                                        state={{
+                                            country
+                                        }}
+                                    >
+                                        {country.name}
+                                    </Link>
                                 )
                             }) : 
                             "None"
