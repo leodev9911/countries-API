@@ -1,20 +1,18 @@
 a {
     text-decoration: none;
 }
-header {
-    display: grid;
-    place-items: center;
-    background-color: var(--dark-blue-dark-mode-elements);
-    height: 64px;
-    width: 100%;
-}
 .country-details__section {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 60px;
-    padding: 50px 30px 0px 30px;
+    padding: 50px 50px 0px 50px;
     width: 100%;
-    max-width: 1200px;
+    height: 100%;
     background-color: var(--very-dark-blue-dark-mode-background);
+}
+.country-details__section.light {
+    background-color: var(--very-light-gray-light-mode-background);
 }
 .home-link {
     display: flex;
@@ -29,6 +27,11 @@ header {
     font-size: 1rem;
     background-color: var(--dark-blue-dark-mode-elements);
 }
+.home-link.light {
+    background-color: var(--white-dark-mode-text-light-mode-lements);
+    box-shadow: 0px 0px 4px 0px rgb(176, 173, 173);
+    color: var(--very-dark-blue-light-mode-text);
+}
 .home-link:hover {
     box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
 }
@@ -36,12 +39,16 @@ header {
     width: 16px;
     filter: invert(100%) sepia(0%) saturate(7478%) hue-rotate(147deg) brightness(104%) contrast(97%);
 }
+.home-link > img {
+    filter: invert(53%) sepia(62%) saturate(4%) hue-rotate(314deg) brightness(88%) contrast(95%);
+}
 .country {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 80px;
+    max-width: 1200px;
     padding-bottom: 50px;
 }
 .country > figure {
@@ -64,6 +71,9 @@ header {
     font-weight: 700;
     margin-bottom: 16px;
 }
+.country-detail > h1.light {
+    color: var(--very-dark-blue-light-mode-text);
+}
 .columns {
     display: flex;
     flex-wrap: wrap;
@@ -80,9 +90,15 @@ header {
     font-weight: 300;
     color: var(--dark-gray-light-mode-input);
 }
+.columns > div > p.light {
+    color: var(--very-dark-blue-light-mode-text);
+}
 .columns > div > p > span {
     color: white;
     font-weight: 700;
+}
+.columns > div > p > span.light {
+    color: var(--very-dark-blue-light-mode-text);
 }
 .borders {
     display: flex;
@@ -92,6 +108,9 @@ header {
     font-size: 1.2rem;
     color: white;
     font-weight: 700;
+}
+.borders.light {
+    color: var(--very-dark-blue-light-mode-text);
 }
 .borders > a {
     display: flex;
@@ -106,6 +125,11 @@ header {
     font-weight: 300;
     background-color: var(--dark-blue-dark-mode-elements);
     cursor: pointer;
+}
+.borders > a.light {
+    background-color: var(--white-dark-mode-text-light-mode-lements);
+    box-shadow: 0px 0px 4px 0px rgb(176, 173, 173);
+    color: var(--very-dark-blue-light-mode-text);
 }
 .borders > a:hover {
     box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);

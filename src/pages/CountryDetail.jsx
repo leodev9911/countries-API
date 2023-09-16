@@ -1,9 +1,10 @@
 import { Link, useLocation } from 'react-router-dom'
-import { useId } from 'react'
 import './CountryDetail.css'
 import arrowBack from '../assets/icons/arrow-back.svg'
 import Navbar from '../Components/Navbar'
 import data from '../../data.json'
+import { useContext } from 'react'
+import { AppContext } from '../context/context'
 
 export default function CountryDetails() {
 
@@ -22,6 +23,8 @@ export default function CountryDetails() {
         borders 
     } = location.state.country
 
+    const { lightMode } = useContext(AppContext)
+
     const bordersCountries = []
     const languagesArr = languages.map(language => language.name)
     const currenciesArr = currencies.map(currencie => currencie.name)
@@ -37,13 +40,17 @@ export default function CountryDetails() {
     return (
         
         <>
-            <header>
+            <header className={lightMode ? "light" : ""}>
                 <Navbar />
             </header>
-            <section className='country-details__section'>
+            <section className={`country-details__section ${lightMode ? "light" : ""}`}>
                 <Link to={`/`}>
-                    <div className='home-link'>
-                        <img src={arrowBack} alt="Arrow back icon" />
+                    <div className={`home-link ${lightMode ? "light" : ""}`}>
+                        <img 
+                            className={lightMode ? "light" : ""}
+                            src={arrowBack} 
+                            alt="Arrow back icon" 
+                        />
                         Back
                     </div>
                 </Link>
@@ -52,26 +59,27 @@ export default function CountryDetails() {
                         <img src={flag} alt={`${name} flag`} />
                     </figure>
                     <div className='country-detail'>
-                        <h1>{name}</h1>
+                        <h1 className={lightMode ? "light" : ""}>{name}</h1>
                         <div className='columns'>
                             <div className='left-details'>
-                                <p><span>Native Name:</span> {nativeName}</p>
-                                <p><span>Population:</span> {population.toLocaleString()}</p>
-                                <p><span>Region:</span> {region}</p>
-                                <p><span>Sub Region:</span> {subregion}</p>
-                                <p><span>Capital:</span> {capital}</p>
+                                <p className={lightMode ? "light" : ""}><span className={lightMode ? "light" : ""}>Native Name:</span> {nativeName}</p>
+                                <p className={lightMode ? "light" : ""}><span className={lightMode ? "light" : ""}>Population:</span> {population.toLocaleString()}</p>
+                                <p className={lightMode ? "light" : ""}><span className={lightMode ? "light" : ""}>Region:</span> {region}</p>
+                                <p className={lightMode ? "light" : ""}><span className={lightMode ? "light" : ""}>Sub Region:</span> {subregion}</p>
+                                <p className={lightMode ? "light" : ""}><span className={lightMode ? "light" : ""}>Capital:</span> {capital}</p>
                             </div>
                             <div className='right-details'>
-                                <p><span>Top Level Domain:</span> {topLevelDomain}</p>
-                                <p><span>Currencies:</span> {currenciesArr.join(', ')}</p>
-                                <p><span>Languages: </span>{languagesArr?.join(', ')}</p>
+                                <p className={lightMode ? "light" : ""}><span className={lightMode ? "light" : ""}>Top Level Domain:</span> {topLevelDomain}</p>
+                                <p className={lightMode ? "light" : ""}><span className={lightMode ? "light" : ""}>Currencies:</span> {currenciesArr.join(', ')}</p>
+                                <p className={lightMode ? "light" : ""}><span className={lightMode ? "light" : ""}>Languages: </span>{languagesArr?.join(', ')}</p>
                             </div>
                         </div>
-                        <p className='borders'>Border Countries: {
+                        <p className={`borders ${lightMode ? "light" : ""}`}>Border Countries: {
                         Array.isArray(borders) ? 
                             bordersCountries.map(country => {
                                 return (
-                                    <Link 
+                                    <Link
+                                        className={lightMode ? "light" : ""} 
                                         key={country.alpha2Code} 
                                         to={`/country-details/:${country.name}`}
                                         state={{

@@ -6,7 +6,7 @@ import './Filters.css'
 
 export default function Filters() {
 
-    const { setFilters } = useContext(AppContext)
+    const { setFilters, lightMode } = useContext(AppContext)
 
     const handleCountry = (event) => {
         setFilters(prev => ({
@@ -24,17 +24,27 @@ export default function Filters() {
 
     return (
         <section className="filters-section">
-            <div className='search-div'>
-                <img src={searchIcon} alt="Search icon" />
+            <div className={`search-div ${lightMode ? 'light' : ''}`} >
+                <img 
+                    src={searchIcon} 
+                    alt="Search icon" 
+                    className={lightMode ? 'light' : ''}
+                />
                 <input 
+                    className={lightMode ? 'light' : ''}
                     id="search-country"
                     type="text" 
                     placeholder="Search for a country..." 
                     onChange={handleCountry}
                 />
             </div>
-            <div className='select-div'>
-                <select id="region" onChange={handleRegion} defaultValue="">
+            <div className={`select-div ${lightMode ? 'light' : ''}`}>
+                <select 
+                    className={lightMode ? 'light' : ''}
+                    id="region" 
+                    onChange={handleRegion} 
+                    defaultValue=""
+                >
                     <option value="" disabled>Filter by region</option>
                     <option value="all">All</option>
                     <option value="Africa">Africa</option>

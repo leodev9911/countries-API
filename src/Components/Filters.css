@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 1200px;
     padding-top: 50px;
     gap: 30px;
 }
@@ -19,6 +20,10 @@
     border-radius: 4px;
     padding-left: 30px;
 }
+.search-div.light {
+    background-color: var(--white-dark-mode-text-light-mode-lements);
+    box-shadow: 0px 0px 4px 0px rgb(176, 173, 173);
+}
 .search-div:hover {
     box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
 }
@@ -26,6 +31,10 @@
     filter: invert(99%) sepia(28%) saturate(0%) hue-rotate(192deg) brightness(105%) contrast(100%);
     width: 22px;
 }
+.search-div > img.light {
+    filter: invert(53%) sepia(62%) saturate(4%) hue-rotate(314deg) brightness(88%) contrast(95%);
+}
+
 .search-div > input {
     outline: none;
     color: #ffffff;
@@ -37,9 +46,15 @@
     font-size: 1.4rem;
     cursor: pointer;
 }
+.search-div > input.light {
+    color: var(--dark-gray-light-mode-input);
+}
 .search-div > input::placeholder {
     color: #ffffff;
     font-size: 1.4rem;
+}
+.search-div > input.light::placeholder {
+    color: var(--dark-gray-light-mode-input);
 }
 select {
     padding-left: 16px;
@@ -53,6 +68,11 @@ select {
     color: #ffffff;
     font-size: 1.4rem;
     cursor: pointer;
+}
+select.light {
+    background-color: var(--white-dark-mode-text-light-mode-lements);
+    box-shadow: 0px 0px 4px 0px rgb(176, 173, 173);
+    color: var(--dark-gray-light-mode-input);
 }
 select:hover {
     box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);

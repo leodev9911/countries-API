@@ -10,14 +10,15 @@ export default function Navbar() {
         setLightMode(!lightMode)
     }
 
-    console.log(lightMode)
-
     return (
         <nav>
-            <h1>Where in the world?</h1>
+            <h1 className={lightMode ? "light" : ""}>Where in the world?</h1>
             <div onClick={toggleLightMode}>
-                <img src={lightModeIcon} alt="Light mode icon" />
-                <p>Dark Mode</p>
+                <img 
+                    src={lightMode ? darkModeIcon : lightModeIcon} 
+                    className={lightMode ? "light" : ""} alt="Light mode icon" 
+                />
+                <p className={lightMode ? "light" : ""} >{lightMode ? 'Dark Mode' : 'Light Mode'}</p>
             </div>
         </nav>
     )

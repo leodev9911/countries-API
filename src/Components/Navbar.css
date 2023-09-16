@@ -12,6 +12,9 @@ nav > h1 {
     font-weight: 700;
     color: white;
 }
+nav > h1.light {
+    color: var(--very-dark-blue-light-mode-text);
+}
 nav > div {
     display: flex;
     align-items: center;
@@ -21,12 +24,18 @@ nav > div {
 }
 nav > div > p {
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 700;
     color: white;
+}
+nav > div > p.light {
+    color: var(--very-dark-blue-light-mode-text);
 }
 nav > div > img {
     width: 22px;
     filter: invert(100%) sepia(4%) saturate(1135%) hue-rotate(196deg) brightness(118%) contrast(100%);
+}
+nav > div > img.light {
+    filter: invert(4%) sepia(5%) saturate(3412%) hue-rotate(155deg) brightness(95%) contrast(91%);
 }
 @media (max-width: 450px) {
     nav > h1 {
