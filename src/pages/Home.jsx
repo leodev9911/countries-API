@@ -1,12 +1,12 @@
-import { useContext, useEffect, useState } from "react"
-import data from "../../data.json"
 import Card from "../Components/Card"
+import data from "../../data.json"
 import Filters from "../Components/Filters"
 import { useFilters } from "../hooks/useFilters.js"
-import { AppContext } from "../context/context"
 
 export default function Home() {
-    const [countries] = useState(data)
+
+    const countries = data
+
     const { filterCountries } = useFilters()
     
     const filteredCountries = filterCountries(countries)
