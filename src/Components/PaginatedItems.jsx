@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import ReactPaginate from 'react-paginate'
 import Card from '../Components/Card'
 import data from '../../data.json'
 import { useFilters } from '../hooks/useFilters.js'
+import './PaginatedItems.css'
+import { AppContext } from '../context/context'
 
 export default function PaginatedItems ({ itemsPerPage }) {
   const countries = data
+  const { lightMode } = useContext(AppContext)
 
   const { filterCountries } = useFilters()
   const filteredCountries = filterCountries(countries)
@@ -13,7 +16,6 @@ export default function PaginatedItems ({ itemsPerPage }) {
 
   const [itemOffset, setItemOffset] = useState(0)
   const endOffset = itemOffset + itemsPerPage
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`)
   const currentItems = filteredCountries.slice(itemOffset, endOffset)
   const pageCount = Math.ceil(filteredCountries.length / itemsPerPage)
 
@@ -28,23 +30,26 @@ export default function PaginatedItems ({ itemsPerPage }) {
 
   return (
       <>
-        <Card
-               countriesToRender={currentItems}
-        />
         <ReactPaginate
           breakLabel="..."
-          nextLabel="next >"
+          nextLabel=">"
           onPageChange={handlePageClick}
           pageRangeDisplayed={5}
           pageCount={pageCount}
-          previousLabel="< previous"
+          previousLabel="<"
           renderOnZeroPageCount={null}
-          containerClassName="pagination"
+          breakClassName="break"
+          containerClassName={`pagination ${lightMode ? 'light' : ''}`}
           pageLinkClassName="page-num"
           previousLinkClassName="page-num"
           nextLinkClassName="page-num"
           activeLinkClassName="active"
         />
+        <section className="cards-section">
+            <Card
+                countriesToRender={currentItems}
+            />
+        </section>
       </>
   )
 }

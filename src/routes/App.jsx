@@ -1,25 +1,24 @@
-import Navbar from "../Components/Navbar"
-import { Route, Routes } from "react-router"
-import Home from "../pages/Home"
-import CountryDetails from "../pages/CountryDetail"
-import { AppContext } from "../context/context"
-import { useContext } from "react" 
+import Navbar from '../Components/Navbar'
+import { Route, Routes } from 'react-router'
+import Home from '../pages/Home'
+import CountryDetails from '../pages/CountryDetail'
+import { AppContext } from '../context/context'
+import { React, useContext } from 'react'
 
+export default function App () {
+  const { lightMode } = useContext(AppContext)
 
-export default function App() {
-    const { lightMode } = useContext(AppContext)
-
-    return (
+  return (
         <>
-            <header className={lightMode ? "light" : ""}>
+            <header className={lightMode ? 'light' : ''}>
                 <Navbar />
             </header>
-            <main className={lightMode ? "light" : ""}>
+            <main className={lightMode ? 'light' : ''}>
                 <Routes>
-                    <Route path="/" element={<Home/>}/>  
-                    <Route path="/country-details/:name" element={<CountryDetails />} />  
-                </Routes>     
-            </main>           
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/country-details/:name" element={<CountryDetails />} />
+                </Routes>
+            </main>
         </>
-    )
+  )
 }

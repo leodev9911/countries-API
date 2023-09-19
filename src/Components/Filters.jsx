@@ -1,48 +1,46 @@
-import { useContext } from 'react'
+import { useContext, React } from 'react'
 import { AppContext } from '../context/context'
 import searchIcon from '../assets/icons/search.svg'
-import arrowDown from '../assets/icons/expand-more.svg'
 import './Filters.css'
 
-export default function Filters() {
+export default function Filters () {
+  const { setFilters, lightMode } = useContext(AppContext)
 
-    const { setFilters, lightMode } = useContext(AppContext)
+  const handleCountry = (event) => {
+    setFilters(prev => ({
+      ...prev,
+      country: event.target.value
+    }))
+  }
 
-    const handleCountry = (event) => {
-        setFilters(prev => ({
-            ...prev,
-            country: event.target.value
-        }))
-    }
+  const handleRegion = (event) => {
+    setFilters(prev => ({
+      ...prev,
+      region: event.target.value
+    }))
+  }
 
-    const handleRegion = (event) => {
-        setFilters(prev => ({
-            ...prev,
-            region: event.target.value
-        }))
-    }
-
-    return (
+  return (
         <section className="filters-section">
             <div className={`search-div ${lightMode ? 'light' : ''}`} >
-                <img 
-                    src={searchIcon} 
-                    alt="Search icon" 
+                <img
+                    src={searchIcon}
+                    alt="Search icon"
                     className={lightMode ? 'light' : ''}
                 />
-                <input 
+                <input
                     className={lightMode ? 'light' : ''}
                     id="search-country"
-                    type="text" 
-                    placeholder="Search for a country..." 
+                    type="text"
+                    placeholder="Search for a country..."
                     onChange={handleCountry}
                 />
             </div>
             <div className={`select-div ${lightMode ? 'light' : ''}`}>
-                <select 
+                <select
                     className={lightMode ? 'light' : ''}
-                    id="region" 
-                    onChange={handleRegion} 
+                    id="region"
+                    onChange={handleRegion}
                     defaultValue=""
                 >
                     <option value="" disabled>Filter by region</option>
@@ -55,5 +53,5 @@ export default function Filters() {
                 </select>
             </div>
         </section>
-    )
+  )
 }
