@@ -4,8 +4,8 @@ import lightModeIcon from '../assets/icons/light-mode.svg'
 import './Navbar.css'
 import { AppContext } from '../context/context'
 
-export default function Navbar() {
-    const { lightMode, setLightMode } = useContext(AppContext)
+export default function Navbar () {
+  const { lightMode, setLightMode } = useContext(AppContext)
     const toggleLightMode = () => {
         setLightMode(!lightMode)
     }
