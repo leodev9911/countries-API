@@ -40,9 +40,6 @@ export default function CountryDetails() {
     return (
         
         <>
-            <header className={lightMode ? "light" : ""}>
-                <Navbar />
-            </header>
             <section className={`country-details__section ${lightMode ? "light" : ""}`}>
                 <Link to={`/`}>
                     <div className={`home-link ${lightMode ? "light" : ""}`}>

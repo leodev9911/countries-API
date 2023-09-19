@@ -1,21 +1,13 @@
-import { useContext, useEffect, useState } from "react"
-import data from "../../data.json"
-import Card from "../Components/Card"
-import Filters from "../Components/Filters"
-import { useFilters } from "../hooks/useFilters.js"
 import Navbar from "../Components/Navbar"
+import { Route, Routes } from "react-router"
+import Home from "../pages/Home"
+import CountryDetails from "../pages/CountryDetail"
 import { AppContext } from "../context/context"
-
+import { useContext } from "react" 
 
 
 export default function App() {
-    const [countries] = useState(data)
-    const { filterCountries } = useFilters()
     const { lightMode } = useContext(AppContext)
-    
-    const filteredCountries = filterCountries(countries)
-
-    
 
     return (
         <>
@@ -23,13 +15,11 @@ export default function App() {
                 <Navbar />
             </header>
             <main className={lightMode ? "light" : ""}>
-                <Filters />
-                <section className="cards-section">
-                    <Card 
-                        countriesToRender={filteredCountries}
-                    />
-                </section>
-            </main>
+                <Routes>
+                    <Route path="/" element={<Home/>}/>  
+                    <Route path="/country-details/:name" element={<CountryDetails />} />  
+                </Routes>     
+            </main>           
         </>
     )
 }
