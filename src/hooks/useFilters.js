@@ -3,6 +3,7 @@ import { AppContext } from '../context/context'
 
 export function useFilters () {
   const { filters, setFilters } = useContext(AppContext)
+  console.log(filters)
 
   const filterCountries = (countries) => {
     return (
